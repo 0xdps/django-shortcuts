@@ -24,6 +24,7 @@ ALIASES = {
     # South
     'mk' : 'makemigrations',
     'm'  : 'migrate',
+    'mm' : 'makemigrations',
     'sm' : 'schemamigration',
     'dm' : 'datamigration',
 
