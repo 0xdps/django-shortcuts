@@ -44,6 +44,9 @@ ALIASES = {
     'rs' : 'runscript'
 }
 
+# Commands that use django-admin instead of manage.py
+DJANGO_ADMIN_COMMANDS = {'startproject', 'startapp', 'version'}
+
 
 def run(command=None, *arguments):
     """
@@ -59,8 +62,8 @@ def run(command=None, *arguments):
     else:
         command = ALIASES.get(command, command)  # Fall back to original command if not an alias
 
-    if command == 'startproject':
-        return call('django-admin.py startproject %s' % ' '.join(arguments), shell=True)
+    if command in DJANGO_ADMIN_COMMANDS:
+        return call('django-admin %s %s' % (command, ' '.join(arguments)), shell=True)
 
     script_path = os.getcwd()
     while not os.path.exists(os.path.join(script_path, 'manage.py')):

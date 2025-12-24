@@ -9,12 +9,31 @@ Usage
 Django shortcuts installs a ``django`` binary that proxies
 Django's ``manage.py`` and ``django-admin.py`` scripts.
 
+You can use either shortcuts or full Django command names:
+
 ::
 
     $ django <command or shortcut>
 
+    # Using shortcuts
+    $ django r                  # runs 'runserver'
+    $ django mk                 # runs 'makemigrations'
+
+    # Using full commands
+    $ django runserver
+    $ django makemigrations
+
+    # Works from any project subdirectory
     $ cd any/project/subdirectory
     $ django <command or shortcut>
+
+Commands that work without a project (using django-admin):
+
+::
+
+    $ django sp myproject       # startproject
+    $ django sa myapp           # startapp
+    $ django version            # show Django version
 
 Requirements
 ------------
