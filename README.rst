@@ -34,10 +34,14 @@ Shortcuts
     # Django
     'c'  : 'collectstatic',
     'r'  : 'runserver',
-    'sd' : 'syncdb',
     'sp' : 'startproject',
     'sa' : 'startapp',
     't'  : 'test',
+
+    # Django Migrations
+    'mk' : 'makemigrations',
+    'm'  : 'migrate',
+    'mm' : 'makemigrations',
 
     # Shell
     'd'  : 'dbshell',
@@ -47,10 +51,8 @@ Shortcuts
     'csu': 'createsuperuser',
     'cpw': 'changepassword',
 
-    # South
-    'mk' : 'makemigrations',
-    'm'  : 'migrate',
-    'mm' : 'makemigrations',
+    # South (deprecated)
+    'sd' : 'syncdb',
     'sm' : 'schemamigration',
     'dm' : 'datamigration',
 
