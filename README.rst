@@ -48,6 +48,7 @@ Shortcuts
     'cpw': 'changepassword',
 
     # South
+    'mk' : 'makemigrations',
     'm'  : 'migrate',
     'mm' : 'makemigrations',
     'sm' : 'schemamigration',
