@@ -56,10 +56,8 @@ def run(command=None, *arguments):
 
     if command is None:
         command = ''
-    else: command = ALIASES.get(command)
-
-    if command is None:
-        sys.exit('django-shortcuts: invalid argument was supplied, please another one.')
+    else:
+        command = ALIASES.get(command, command)  # Fall back to original command if not an alias
 
     if command == 'startproject':
         return call('django-admin.py startproject %s' % ' '.join(arguments), shell=True)
